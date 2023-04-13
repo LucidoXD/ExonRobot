@@ -146,9 +146,8 @@ dbclean_help: |
 
 
 debug_help: |
-   *ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ*
-   •➥ /debug <on/off>*:* ʟᴏɢs ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜᴘᴅᴀᴛᴇs.ᴛxᴛ.
-   •➥ /logs: ʀᴜɴ ᴛʜɪs ɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ʟᴏɢs ɪɴ ᴘᴍ.
+    *Auto approval*
+   •➥ /Autoapprove : on
 
 
 devs_help: |
