@@ -385,7 +385,7 @@ def __chat_settings__(chat_id, user_id):
     return "ᴀɴᴛɪғʟᴏᴏᴅ ʜᴀs ʙᴇᴇɴ sᴇᴛ ᴛᴏ`{}`.".format(limit)
 
 
-__mod_name__ = "Anti-Raid"
+__mod_name__ = "Anti-Flood"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
