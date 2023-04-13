@@ -61,23 +61,23 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEX = """
-ʜᴇʟʟᴏ `{}`, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
+Hello wtsup
 """
 
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="❣ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ❣︎", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="Add to your group", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
     ],
     [
-        InlineKeyboardButton(text=f"🚁 ʜᴇʟᴘ 🚁", callback_data="help_back"),
-        InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
+        InlineKeyboardButton(text=f"Help and cmds", callback_data="help_back"),
+        InlineKeyboardButton(text=f"Bot stats", callback_data="stats_callback"),
     ],
     [
-        InlineKeyboardButton(text="🏡 ᴀʙᴏᴜᴛ 🏡", callback_data="ABG_"),
-        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="About bot", callback_data="ABG_"),
+        InlineKeyboardButton(text="Developer", url=f"tg://user?id={OWNER_ID}"),
     ],
 ]
 
@@ -230,7 +230,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     [
                         InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ",
+                            text="Support",
                             callback_data="ABG_support",
                         ),
                     ]
@@ -254,7 +254,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 else:
                     send_settings(match.group(1), update.effective_user.id, True)
 
-            elif args[0][1:].isdigit() and "𝐑ᴜʟᴇs" in IMPORTED:
+            elif args[0][1:].isdigit() and "Rules" in IMPORTED:
                 IMPORTED["𝐑ᴜʟᴇs"].send_rules(update, args[0], from_pm=True)
 
         else:
@@ -264,11 +264,11 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
-            lol.edit_text("🎊")
+            lol.edit_text("🤖")
             time.sleep(0.5)
             lol.edit_text("⚡")
             time.sleep(0.3)
-            lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+            lol.edit_text("Starting.....")
             time.sleep(0.4)
             lol.delete()
             update.effective_message.reply_text(
@@ -435,7 +435,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="• ʜᴇʟᴘ •​",
+                                ttext"Help",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -446,12 +446,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "Choose an option on getting help",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="• ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ •",
+                            text="Open in private",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
@@ -459,7 +459,7 @@ def get_help(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="• ᴏᴩᴇɴ ʜᴇʀᴇ •",
+                            text="Open Here",
                             callback_data="help_back",
                         )
                     ],
@@ -487,8 +487,8 @@ def get_help(update: Update, context: CallbackContext):
             )
             help_buttons.append(
                 [
-                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="ABG_support"),
+                    InlineKeyboardButton(text="Back", callback_data="help_back"),
+                    InlineKeyboardButton(text="Support", callback_data="ABG_support"),
                 ]
             )
             send_help(
@@ -716,7 +716,7 @@ def main():
                 f"@{SUPPORT_CHAT}",
                 animation="https://telegra.ph/file/8dea393ddf4fc2e339179.gif",
                 caption=f"""
-ㅤ🥀 {dispatcher.bot.first_name} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ ✨ .....
+ㅤ{dispatcher.bot.first_name} is online
 
 ━━━━━━━━━━━━━
 ⍟ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/{OWNER_USERNAME})
