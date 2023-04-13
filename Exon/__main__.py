@@ -76,7 +76,7 @@ buttons = [
         InlineKeyboardButton(text=f"Bot stats", callback_data="stats_callback"),
     ],
     [
-        InlineKeyboardButton(text="About bot", callback_data="ABG_"),
+        InlineKeyboardButton(text="About bot", url=f"t.me/OFFICIALBOT_UPDATE"),
         InlineKeyboardButton(text="Developer", url=f"tg://user?id={OWNER_ID}"),
     ],
 ]
