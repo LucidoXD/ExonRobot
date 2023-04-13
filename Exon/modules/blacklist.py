@@ -558,7 +558,7 @@ def blacklist_help_bse(update: Update, context: CallbackContext):
     bot.answer_callback_query(query.id)
 
 
-__mod_name__ = "𝐁-ʟɪsᴛ️"
+__mod_name__ = "Blacklist"
 
 
 def get_help(chat):
@@ -566,13 +566,13 @@ def get_help(chat):
         gs(chat, "blacklist_help_bse"),
         [
             InlineKeyboardButton(
-                text="ʙʟᴀᴄᴋʟɪsᴛ 👽", callback_data="asusau_help_wblack"
+                text="ʙʟᴀᴄᴋʟɪsᴛ", callback_data="asusau_help_wblack"
             ),
             InlineKeyboardButton(
-                text="ʙ-sᴛɪᴄᴋᴇʀ 🦍", callback_data="asusau_help_sblack"
+                text="ʙ-sᴛɪᴄᴋᴇʀ", callback_data="asusau_help_sblack"
             ),
         ],
     ]
 
 
-# """
+ """
